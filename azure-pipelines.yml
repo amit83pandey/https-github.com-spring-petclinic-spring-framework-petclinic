@@ -67,18 +67,7 @@ stages:
               appType: webAppLinux
               appName: $(webAppName)
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
-steps:
-- script: date /t
-  displayName: Get the date
-- script: dir
-  workingDirectory: $(Agent.BuildDirectory)
-  displayName: List contents of a folder
-- script: |
-    set MYVAR=foo
-    set
-  displayName: Set a variable and then display all
-  env:
-    aVarFromYaml: someValue
+
 - task: CmdLine@2
   inputs:
     script: |
