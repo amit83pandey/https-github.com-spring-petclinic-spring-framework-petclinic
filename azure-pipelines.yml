@@ -67,10 +67,10 @@ stages:
               appType: webAppLinux
               appName: $(webAppName)
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
-
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo 'here in this'
-      
-      echo Hello world
+          - task: CmdLine@2
+            inputs:
+                script: |
+                    echo Write your commands here
+                    
+                    echo Hello world
+          
